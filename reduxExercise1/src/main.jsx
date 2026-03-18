@@ -3,9 +3,13 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from 'react-redux'
-
+import userReducer from './user.js'
+import './output.css'
 const store=configureStore({
-  reducer:{}
+  reducer:{
+      user:userReducer,
+  }
+
 })
 
 createRoot(document.getElementById('root')).render(
