@@ -10,7 +10,7 @@ const Display = () => {
 <ul >
    {
     todos.length>0 &&
-    todos.map((todo,index)=><li
+    todos.map(todo=><li
       key={todo.id}
       className='flex justify-between pr-6 pl-20'  
       ><Todo todo={todo}/></li>)}
