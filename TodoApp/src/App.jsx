@@ -3,13 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './output.css'
-import Todo from './components.jsx/Todo'
+import AddTodo from './components.jsx/AddTodo'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Todo/>
+      <AddTodo/>
     </>
   )
 }
