@@ -1,12 +1,18 @@
 import { Trash } from 'lucide-react'
 import React from 'react'
+import {useDispatch,useSelector} from 'react-redux'
 
+import { deleteTodo } from './features/todosSlice'
 const Todo = ({todo}) => {
+    const dispatch=useDispatch()
   return (
 <>
+
 <input type='checkbox'/>
-<p>{todo}</p>
-<Trash/>
+<p>{todo.text}</p>
+ <button onClick={()=>{dispatch(deleteTodo(todo.id))}}>
+    <Trash/>
+    </button>
 </>
 )
 }
