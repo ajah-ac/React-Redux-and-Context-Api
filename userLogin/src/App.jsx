@@ -5,14 +5,15 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Profile from './Profile'
 import Login from './Login'
+import ChangeColor from './ChangeColor'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
 
 <Profile/>
+<ChangeColor/>
 <Login/>
 
     </>
