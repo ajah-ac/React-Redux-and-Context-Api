@@ -198,6 +198,20 @@
   .justify-between {
     justify-content: space-between;
   }
+  .space-y-50 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 50) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 50) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-x-50 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 50) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 50) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -226,6 +240,12 @@
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
+  }
+  .pr-6 {
+    padding-right: calc(var(--spacing) * 6);
+  }
+  .pl-20 {
+    padding-left: calc(var(--spacing) * 20);
   }
   .underline {
     text-decoration-line: underline;
@@ -261,6 +281,16 @@
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -333,6 +363,8 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-space-y-reverse: 0;
+      --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-outline-style: solid;
       --tw-blur: initial;

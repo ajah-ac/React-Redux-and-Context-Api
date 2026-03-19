@@ -1,12 +1,21 @@
 import {useSelector} from 'react-redux'
 import React from 'react'
 
+import Todo from './Todo'
 const Display = () => {
-    const todos=useSelector(state=>state.todos.value)
-
+    const todos=useSelector(state=>state.todos.value.items)
   return (
-    <div>Todo:{todos}</div>
-  )
+
+<>
+<ul >
+   {
+    todos.map((todo,index)=><li
+      key={index}
+      className='flex justify-between pr-6 pl-20'  
+      ><Todo todo={todo}/></li>)}
+
+    </ul></>
+)
 }
 
 export default Display

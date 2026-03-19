@@ -1,13 +1,13 @@
 
 import {createSlice} from  '@reduxjs/toolkit'
-const initialStateVal=''
+const initialStateVal={items:[]}
 const todoSlice=createSlice({
     name:'todo',
     initialState:{value:initialStateVal}
     ,
     reducers:{
         addTodo:(state,action)=>{
-        state.value=action.payload
+        state.value.items.push(action.payload)
         }
     }
 
