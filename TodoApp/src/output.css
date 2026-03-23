@@ -10,6 +10,7 @@
     --color-red-200: oklch(88.5% 0.062 18.334);
     --color-green-200: oklch(92.5% 0.084 155.995);
     --spacing: 0.25rem;
+    --container-2xl: 42rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
@@ -185,6 +186,12 @@
   }
   .w-3\/4 {
     width: calc(3 / 4 * 100%);
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
+  }
+  .max-w-400 {
+    max-width: calc(var(--spacing) * 400);
   }
   .border-collapse {
     border-collapse: collapse;
