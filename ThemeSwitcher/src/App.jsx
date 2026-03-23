@@ -1,19 +1,23 @@
-import { createContext,useState } from 'react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-  const ThemeContext=createContext(null)
+import { ThemeProvider } from './ThemeContext'
+import ToggleButton from './ToggleButton'
+import ThemedBox from './ThemedBox'
 function App() {
-  const [theme, setTheme] = useState('light')
-function toggleTheme(){
-setTheme(prev=>prev==='light'?'dark':'light')}
+  const [count, setCount] = useState(0)
+
   return (
     <>
-    
-    
+    <ThemeProvider>
+      <ToggleButton/>
+      <ThemedBox/>
+    </ThemeProvider>
     </>
   )
 }
 
 export default App
+

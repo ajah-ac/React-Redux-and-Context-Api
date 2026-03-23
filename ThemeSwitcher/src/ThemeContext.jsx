@@ -15,6 +15,6 @@ setTheme(prev=>prev==='light'?'dark':'light')
 
 }
 export  function useTheme(){
-    return useContext(ThemeProvider)
+    return useContext(ThemeContext)
 
 }
