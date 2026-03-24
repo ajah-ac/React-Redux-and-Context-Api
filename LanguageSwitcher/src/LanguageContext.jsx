@@ -10,10 +10,11 @@ function toggleLan(){
 }
   return ( <LanguageContext.Provider value={{lan,toggleLan}}>
     {children}
+    <h1></h1>
   </LanguageContext.Provider>)
 }
 
 export default LanguageProvider
- export const useLanContext=()=>{
+ export const useLanguage=()=>{
     return useContext(LanguageContext)
 }
