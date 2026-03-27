@@ -19,7 +19,7 @@ const Product = ({ name, price, image ,id }) => {
     const dispatch=useDispatch()
     return (
         <>
-            <div className='max-w-40 flex '><img src={image} alt="image here" /></div>
+            <div className='max-w-40 flex '><img src={image} className='w-full' alt="image here" /></div>
             <div className=''><h2>{name}</h2>
                 <span>{price}</span></div>
             <button onClick={()=>dispatch(addToCart({name,image,price,id}))} className='border-1 rounded-xl m-2' >Add to cart</button> </>
