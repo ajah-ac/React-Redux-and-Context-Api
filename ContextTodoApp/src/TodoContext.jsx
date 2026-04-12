@@ -6,7 +6,7 @@ function reducer(state,action){
         case 'add':
             return {items:[...state.items,action.payload]}
             case 'delete':
-                return {items:items.filter(item=>!item.id)} 
+                return {items:state.items.filter(item=>item.id!==action.payload)} 
         default:
             return state.items;
     }
